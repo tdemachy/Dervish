@@ -26,11 +26,9 @@ public class CameraController : MonoBehaviour
 
         if (Input.GetMouseButton(0))
         {      
-            float angle = m_rotationSpeed * 360.0f * deltaPos.x / Screen.width;
-            transform.Rotate(_camera.transform.up, angle);
-
-            angle =  -m_rotationSpeed *  360.0f * deltaPos.y / Screen.height;
-            transform.Rotate(_camera.transform.right, angle);
+            float angle1 = m_rotationSpeed * 360.0f * deltaPos.x / Screen.width;
+            float angle2 =  -m_rotationSpeed *  360.0f * deltaPos.y / Screen.height;
+            transform.Rotate(0f, angle1, angle2);
         }
 
         if (Input.GetMouseButton(1))
