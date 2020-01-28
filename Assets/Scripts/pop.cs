@@ -17,6 +17,6 @@ public class pop : MonoBehaviour
     void Update()
     {
         if (Input.GetButton("Jump"))
-           toSpawn = Instantiate(toSpawn, new Vector3(Random.Range(-20f, 20f), 2f, Random.Range(-20f, 20f)), Quaternion.identity, this.transform);
+           toSpawn = Instantiate(toSpawn, new Vector3(Random.Range(-30f, 30f), Random.Range(0f, 20f), Random.Range(-30f, 30f)), Quaternion.identity, this.transform);
     }
 }
